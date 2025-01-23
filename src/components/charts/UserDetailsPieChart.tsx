@@ -31,10 +31,10 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function UserDetailsPieChart() {
+export function UserDetailsPieChart({ totalUsers }: any) {
   const data: any = useAppSelector((state) => state.users.users);
+  console.log(data);
   const userData = data?.kycs || [];
-  console.log(userData);
 
   const counts = userData.reduce(
     (
@@ -62,14 +62,12 @@ export function UserDetailsPieChart() {
       fill: "var(--color-firefox)",
     },
   ];
-
+  console.log("cheċ", data);
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
         <CardTitle>Summary</CardTitle>
-        <CardDescription>{`Totel Users ${
-          data.totalUsers ? data.totalUsers : 0
-        }`}</CardDescription>
+        <CardDescription>{`Totel Users ${totalUsers}`}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer

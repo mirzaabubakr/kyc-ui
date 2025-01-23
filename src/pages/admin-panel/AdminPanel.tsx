@@ -61,7 +61,7 @@ export default function AdminPanel() {
       <div className="flex flex-col gap-5 items-center justify-center min-h-screen">
         <div className="w-10/12 bg-white gap-4 p-4 items-center rounded-lg shadow-xl">
           <h1 className="text-center text-blue-500">Know Your Customers</h1>
-          <UserDetailsPieChart />
+          <UserDetailsPieChart totalUsers={data.totalUsers} />
           <UserDetails columns={columns} role={decodedUser.role} />
         </div>
       </div>

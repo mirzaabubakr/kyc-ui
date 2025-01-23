@@ -1,9 +1,9 @@
-import { loginAction, registerAction } from "@/actions/authActions";
+import { loginAction } from "@/actions/authActions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useAppDispatch } from "@/hooks/redux-hooks";
 import { setUser } from "@/states/reducers/authSlice";
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
 export default function LoginForm() {
