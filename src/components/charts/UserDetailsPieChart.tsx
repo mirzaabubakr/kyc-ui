@@ -67,7 +67,9 @@ export function UserDetailsPieChart() {
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
         <CardTitle>Summary</CardTitle>
-        <CardDescription>{`Totel Users ${data.totalUsers}`}</CardDescription>
+        <CardDescription>{`Totel Users ${
+          data.totalUsers ? data.totalUsers : 0
+        }`}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
