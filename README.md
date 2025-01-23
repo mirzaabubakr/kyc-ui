@@ -23,9 +23,13 @@ To get started with the KYC UI, follow these steps:
    cd kyc-ui
    ```
 3. Install the dependencies:
+
    ```bash
    npm install
+
    ```
+
+4. add .env as specified in .env.sample:
 
 ## Usage
 
@@ -42,5 +46,4 @@ This will start the development server and you can view the application in your 
 
 - `npm run dev`: Starts the development server
 - `npm run build`: Builds the application for production
-- `npm test`: Runs the test suite
 - `npm run preview`: Starts the production server
