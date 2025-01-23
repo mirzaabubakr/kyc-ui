@@ -1,4 +1,3 @@
-import { flexRender } from "@tanstack/react-table";
 import {
   Select,
   SelectContent,
@@ -17,7 +16,7 @@ export default function ChangeStatus({ cell }: any) {
   const [selectedStatus, setSelectedStatus] = useState(
     cell.row.original.status
   );
-
+  console.log(selectedStatus);
   const { mutate, isPending, isError } = useMutation({
     mutationFn: async ({ status, id }: { status: string; id: string }) => {
       const response = await AdminService.updateStatus(status, id);

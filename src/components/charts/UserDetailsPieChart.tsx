@@ -63,8 +63,6 @@ export function UserDetailsPieChart() {
     },
   ];
 
-  const totalUsers = data.length;
-
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
