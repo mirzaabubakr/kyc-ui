@@ -7,7 +7,11 @@ export const signInSchema = object({
   password: string({ required_error: "Password is required" })
     .min(1, "Password is required")
     .min(8, "Password must be more than 8 characters")
-    .max(32, "Password must be less than 32 characters"),
+    .max(32, "Password must be less than 32 characters")
+    .regex(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,32}$/,
+      "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character"
+    ),
 });
 
 export const registerSchema = object({
@@ -21,5 +25,9 @@ export const registerSchema = object({
   password: string({ required_error: "Password is required" })
     .min(1, "Password is required")
     .min(8, "Password must be more than 8 characters")
-    .max(32, "Password must be less than 32 characters"),
+    .max(32, "Password must be less than 32 characters")
+    .regex(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,32}$/,
+      "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character"
+    ),
 });

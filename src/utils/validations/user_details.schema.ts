@@ -1,6 +1,6 @@
 import { object, string, z } from "zod";
 const MAX_FILE_SIZE = 5000000;
-const ACCEPTED_FILE_TYPES = ["application/pdf", "image/jpeg", "image/png"]; // Allowed MIME types
+const ACCEPTED_FILE_TYPES = ["application/pdf", "image/jpeg", "image/png"];
 
 export const userDetailSchema = object({
   document: z
